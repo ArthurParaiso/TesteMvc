@@ -1,0 +1,28 @@
+﻿@model TesteMvcArthur.Models.FilhosModel
+
+@{
+    ViewData["Title"] = "APAGAR DADOS DO FILHO DE FUNCIONÁRIO";
+}
+<br />
+<h2>Deletar</h2>
+
+<h3>Deseja deletar este funcionário ?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FilhoId)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Retorna para a Lista</a>
+    </form>
+</div>

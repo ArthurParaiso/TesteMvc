@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TesteMvcArthur.Models.FilhosModel>
+@{
+    ViewData["Title"] = "FILHOS DE FUNCIONÁRIOS";
+}
+
+<p>
+    <a asp-action="Create">Criar Novo Filho de Funcionario</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.FilhoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.FuncionarioId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FilhoId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FuncionarioId)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.FilhoId }) |
+                    @Html.ActionLink("Ver", "Details", new { id = item.FilhoId }) |
+                    @Html.ActionLink("Deletar", "Delete", new { id = item.FilhoId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

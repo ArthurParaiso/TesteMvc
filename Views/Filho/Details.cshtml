@@ -1,0 +1,42 @@
+﻿@model TesteMvcArthur.Models.FilhosModel
+
+@{
+    ViewData["Title"] = "DETALHE DO FILHO DE FUNCIONÁRIO";
+}
+<br />
+<h2>Detalhes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FuncionarioId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FuncionarioId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nascimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nascimento);
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FuncionarioId);
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FuncionarioId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.FilhoId">Edit</a> |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FilhoId }) |
+    <a asp-action="Index">Retornar para a Lista</a>
+</div>
